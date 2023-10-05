@@ -115,50 +115,68 @@ h2{
     font-size: 2.5rem;
     padding: 1.875rem 0px;
     font-weight: 80;
+    margin: 1.5625rem 0px;
 
 }
 
 .contenedorDos{
     width: 100%;
     height: 26.875rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 23.75rem );
+    grid-template-rows: 1, 1fr;
+    grid-area: 
+    "card1 card2 card3 card 4";
     justify-content: center;
-    margin: auto;
+    justify-items: center;
+
 }
 
-.contenedorDos .card{
+.contenedorDos div{
     width: 20.625rem;
-    height: 26.875rem;
+    height: 30rem;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 20px;
     text-align: center;
     transition: all 0.25s;
 }
 
-.contenedorDos .card:hover{
+.contenedorDos div:hover{
     transform: translate(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.contenedorDos .card img{
+.contenedorDos div img{
     width: 20.625rem;
     height: 17.5rem;
 }
 
-.card{
+div{
     font-size: 1.25rem;
 }
-.contenedorDos .card h4{
+.contenedorDos div h4{
     color: #73351F;
     margin-top: .3125rem;
     padding: .9375rem;
 }
 
-.contenedorDos .card p{
+.contenedorDos div p{
     color: #73351F;
+}
+.comprar{
+    background-color: #DFC3AA;
+    color: #73351F;
+    border: 0px;
+    padding: .625rem 2.1875rem;
+    border-radius: .1875rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+.comprar:hover {
+    background-color: #c09c7dd8;
 }
 
 .contenedorTres{
@@ -170,9 +188,6 @@ h2{
     grid-template-rows: repeat(4, 1fr);
     gap: 1.25rem ;
     padding: 3.125rem;
-
-
-
 }
 
 .contenedorTres a{
@@ -352,31 +367,33 @@ input {
         margin-top: 1.25rem;
     }
     .contenedorDos{
-        padding: .3125rem;
-        margin: .125rem;
+        grid-template-columns: repeat(4, 18.75rem );
+
     }
 
-    .contenedorDos .card:hover{
+    .contenedorDos div:hover{
         transform: translate(-0.3125rem);
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
-    .contenedorDos .card{
+
+    .comprar{
+        margin-top: 1.25rem;
+    }
+    .contenedorDos div{
         width: 15.625rem;
         height: 22.5rem;
-        margin: .625rem;
         border-radius: .3125rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-        
-        
+
     }
 
-    .contenedorDos .card img{
+    .contenedorDos div img{
         width: 15.625rem;
         height: 12.5rem;
         overflow: hidden;
         
     }
-    .contenedorDos .card h4, p{
+    .contenedorDos div h4, p{
         font-size: 1.125rem;
     }
 
@@ -403,32 +420,39 @@ input {
         margin-top: 3.125rem;
     }
     .contenedorDos{
-        padding: .3125rem;
-        margin: .125rem;
+        grid-template-columns: repeat(4, 15.625rem);
+        height: 20.625rem;
+        margin-bottom: 1.875rem;
     }
 
-    .contenedorDos .card:hover{
+    .contenedorDos div:hover{
         transform: translate(-0.3125rem);
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
-    .contenedorDos .card{
+    .contenedorDos div{
         width: 13.4375rem;
         height: 20.625rem;
-        margin: .625rem;
         border-radius: .3125rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 
-
     }
 
-    .contenedorDos .card img{
+    .contenedorDos div img{
         width: 13.4375rem;
         height: 12.5rem;
         overflow: hidden;
 
     }
-    .contenedorDos .card h4, p{
+    .contenedorDos div h4, p{
         font-size: 1.125rem;
+    }
+
+    .contenedorDos div h4{
+        padding: .625rem;
+    }
+    .comprar{
+        margin-top: .9375rem;
+        padding: .5rem 1.5625rem;
     }
 
     .contenedorTres{
@@ -464,15 +488,19 @@ input {
         margin-top: 1.25rem;
     }
     .contenedorDos{
-        padding: .9375rem;
-        margin: .125rem;
+        height: 26.875rem;
+        grid-template-columns: repeat(2, 18.75rem);
+        grid-template-rows: repeat(2, 1fr);
+        grid-area: 
+        "card1 card2 "
+        "card3 card4";
     }
 
-    .contenedorDos .card:hover{
+    .contenedorDos div:hover{
         transform: translate(-0.3125rem);
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
-    .contenedorDos .card{
+    .contenedorDos div{
         width: 15.625rem;
         height: 20.625rem;
         margin: 1.25rem;
@@ -482,13 +510,13 @@ input {
 
     }
 
-    .contenedorDos .card img{
+    .contenedorDos div img{
         width: 15.625rem;
         height: 12.5rem;
         overflow: hidden;
 
     }
-    .contenedorDos .card h4, p{
+    .contenedorDos div h4, p{
         font-size: 1.125rem;
     }
 
@@ -506,16 +534,16 @@ input {
     }
 
     .contenedorDos{
-        flex-direction: row;
+        grid-template-columns: repeat(2, 12.5rem);
+        grid-template-rows: repeat(2, 1fr);
+        grid-area: 
+        "card1 card2 "
+        "card3 card4";
     }
-
-    .contenedorDos{
-        padding: .9375rem;
-        margin: .125rem;
-    }
-    .contenedorDos .card{
+    
+    .contenedorDos div{
         width: 9.375rem;
-        height: 12.5rem;
+        height: 15rem;
         margin: 1.25rem;
         border-radius: .3125rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -523,20 +551,28 @@ input {
 
     }
 
-    .contenedorDos .card img{
+    .contenedorDos div img{
         width: 9.375rem;
-        height: 6.25rem;
+        height: 7.5rem;
         overflow: hidden;
 
     }
-    .contenedorDos .card h4, p{
-        font-size: 1rem;
+    .contenedorDos div h4, p{
+        font-size: .875rem;
+    }
+
+    .comprar{
+        padding: .3125rem;
+        font-size: .875rem;
+    }
+    .card3 button{
+        margin-top: .3125rem;
     }
 
     .contenedorTres{
         display: block;
         margin: 0;
-        margin-top: 6.25rem;
+        margin-top: 5rem;
         padding: 2.5rem;
         height: 18.75rem;
         margin-bottom: 31.25rem;
@@ -562,8 +598,33 @@ input {
 
 @media (max-width: 375px){
 
+    h2{
+        margin: 0px;
+    }
+    .contenedorDos{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .contenedorDos div{
+        width: 12.5rem;
+        height: 16.25rem;
+    }
+
+
+    .contenedorDos div img{
+        width: 12.5rem;
+        height: 9.375rem;
+    }
+
+    button{
+        margin-top: .3125rem;
+    }
+
     .contenedorTres{
-        margin-top: 34.375rem;
+        margin-top: 1.25rem;
     }
     footer{
         height: 90vh;
@@ -578,5 +639,3 @@ input {
         text-align: center;
         margin: 0;
     }
-
-
